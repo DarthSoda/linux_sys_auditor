@@ -4,7 +4,8 @@ on:
   push:
     tags:
       - 'v*' # Triggers whenever you push a tag starting with 'v' (e.g., v1.0.0)
-
+permissions:
+  contents: write
 jobs:
   release:
     name: Build and Publish
