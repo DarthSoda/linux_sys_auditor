@@ -44,10 +44,10 @@ jobs:
           else
             cargo build --release --target ${{ matrix.target }}
           fi
-
+      
       - name: Rename binary for release
         run: |
-          mv target/${{ matrix.target }}/release/linux_sys_auditor-${{ matrix.target }}
+          mv target/${{ matrix.target }}/release/linux_sys_auditor linux_sys_auditor-${{ matrix.target }}
 
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2
